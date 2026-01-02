@@ -1,0 +1,117 @@
+/* Top Red Bar */
+.explore-top-bar {
+  background-color: #dc3f4d; /* your special red */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px; /* space from left and right edges */
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.top-bar-left {
+  padding-left: 10px; /* extra padding from left edge */
+}
+
+
+/* Explore Collection Section */
+.explore-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.section-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Categories Navbar */
+.categories-navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.categories-navbar button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 2px solid #dc3f4d;
+  background: white;
+  color: #dc3f4d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categories-navbar button:hover {
+  background: #dc3f4d;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.categories-navbar button.active {
+  background: #dc3f4d;
+  color: white;
+}
+
+/* Books Grid */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Book Card */
+.book-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 180px;
+  cursor: pointer;
+}
+
+.book-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.book-card .book-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .books-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .book-card img {
+    height: 180px;
+  }
+}
